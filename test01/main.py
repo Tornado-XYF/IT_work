@@ -41,14 +41,14 @@ async def login(user:UserLogin):
         in_users = user_db[user.name]
 
         if user.password == in_users["password"]:
-            print(in_users["info"])
-            return "ok"
+            return in_users["info"]
         else:
-            return "password wrong"
+            return "failed"
     except Exception as e:
         print(f"登录失败:{e}")
         return "failed"
 
 import uvicorn
+
 
 uvicorn.run(app, host="127.0.0.1", port=11451)
