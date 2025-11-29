@@ -36,7 +36,7 @@ async def login(user:UserLogin):
 
     try:
         if user.name not in user_db:
-            return "resigner first"
+            return "failed"
 
         in_users = user_db[user.name]
 
@@ -52,3 +52,4 @@ import uvicorn
 
 
 uvicorn.run(app, host="127.0.0.1", port=11451)
+
