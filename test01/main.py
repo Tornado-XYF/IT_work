@@ -17,7 +17,7 @@ class UserLogin(BaseModel):
 
 @app.get("/hello")
 async def hello():
-    return {"message": "Hello"}
+    return "hello"
 
 @app.post("/resigner")
 async def register(user:UserRegister):
@@ -52,4 +52,5 @@ import uvicorn
 
 
 uvicorn.run(app, host="127.0.0.1", port=11451)
+
 
